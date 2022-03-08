@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="static/media/images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/css/style.css">
+    <script defer src="static/js/jsmediatags.min.js"></script>
+    <script defer src="static/js/script.js"></script>
+    <script defer src="static/js/visuals.js"></script>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="player-container">
+        <!-- Song -->
+        <div class="img-container">
+            <img src="static/media/images/default.jpg" alt="Album Art">
+        </div>
+        <h2 id="title">Music Player</h2>
+        <h3 id="artist">Akash Zeno</h3>
+        <audio></audio>
+        <!-- Progress -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+        <!-- Controls -->
+        <div class="player-controls">
+            <span class="fas fa-backward" id="prev" title="Previous"></span>
+            <span class="fas fa-play main-button" id="play" title="Play"></span>
+            <span class="fas fa-forward" id="next" title="Next"></span>
+        </div>
+        <input align="middle" type="file" id="file-selector" accept=".mp3, .flac, .m4a, .ogg, .wma" multiple>
+    </div>
+</body>
+</html>
